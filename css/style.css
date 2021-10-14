@@ -52,7 +52,7 @@ main{
 
 .container-big{
     height: calc(100vh - 80px);
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items:center;
     position: relative;
@@ -86,14 +86,6 @@ main{
     flex-wrap: wrap;
 }
 
-.item:nth-of-type(odd){
-    background-color: deeppink;
-}
-
-.item:nth-of-type(even){
-    background-color: deepskyblue;
-}
-
 .item{
     width: calc((100% - 20px) / 5);
     height: calc((100% - 20px) / 5);
@@ -125,12 +117,15 @@ footer{
     align-items: center;
 }
 
-.footer-left{
-    width: 15%;
-    height: 80%;
+.footer-section{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.footer-left{
+    width: 15%;
+    height: 80%;
 }
 
 .action{
@@ -138,25 +133,38 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .action i{
     font-size: 40px;
 }
 
+.action .text{
+    font-weight: 700;
+}
+
 .menu i{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .footer-center{
     width: 60%;
-    height: 100%;
+    height: 80%;
+}
+
+.special{
+    display:flex;
+    align-items: center;
+}
+
+.special .menu i{
+    margin-left: 10px;
 }
 
 .footer-right{
     width: 8%;
-    height: 100%;
+    height: 80%;
 }
 
 /* /FOOTER */
@@ -174,6 +182,14 @@ footer{
     background-color: lightyellow;
 }
 
+.debug .item:nth-of-type(odd){
+    background-color: deeppink;
+}
+
+.debug .item:nth-of-type(even){
+    background-color: deepskyblue;
+}
+
 .debug .footer-left{
     background-color: deeppink;
 }
@@ -185,6 +201,4 @@ footer{
 .debug .footer-right{
     background-color: deeppink;
 }
-
-
 /* /DEBUG */

@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 /* +++ COMMONS +++ */
-.clearfix{
+.clearfix::after{
     clear: both;
     display: table;
     content: "";
@@ -23,12 +24,38 @@
 
 /* +++ MAIN +++ */
 main{
-    height: calc(100vh - 100px);
     background-color: black;
-    color:white;
+    position: relative;
+}
+
+.speaker-view{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.speaker-view .btn{
+    font-size: 15px;
+    background: linear-gradient(#3d3d3d, #1f1f1f);
+    border-radius: 3px;
+    padding: 7px;
+    margin-left: 5px;
+}
+
+.speaker-view .btn span{
+    margin-left: 8px;
+}
+
+.speaker-view .btn:nth-of-type(1){
+    padding: 7px 12px;
+}
+
+.container-big{
+    height: calc(100vh - 80px);
     display:flex;
     justify-content: space-around;
     align-items:center;
+    position: relative;
 }
 
 .container-lato{
@@ -56,6 +83,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-content: space-between;
+    flex-wrap: wrap;
 }
 
 .item:nth-of-type(odd){
@@ -67,8 +95,8 @@ main{
 }
 
 .item{
-    width: 19%;
-    height: 19%;
+    width: calc((100% - 20px) / 5);
+    height: calc((100% - 20px) / 5);
     position: relative;
 }
 
@@ -90,9 +118,47 @@ main{
 
 /* +++ FOOTER +++ */
 footer{
-    height: 100px;
-    background-color: lightpink;
+    height: 80px;
+    background: linear-gradient(#252525, #1f1f1f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.footer-left{
+    width: 15%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.action{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.action i{
+    font-size: 40px;
+}
+
+.menu i{
+    font-size: 25px;
+}
+
+.footer-center{
+    width: 60%;
+    height: 100%;
+}
+
+.footer-right{
+    width: 8%;
+    height: 100%;
+}
+
 /* /FOOTER */
 
 
@@ -107,5 +173,18 @@ footer{
 .debug .container-centro{
     background-color: lightyellow;
 }
+
+.debug .footer-left{
+    background-color: deeppink;
+}
+
+.debug .footer-center{
+    background-color: deepskyblue;
+}
+
+.debug .footer-right{
+    background-color: deeppink;
+}
+
 
 /* /DEBUG */

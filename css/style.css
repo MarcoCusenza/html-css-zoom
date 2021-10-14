@@ -153,18 +153,18 @@ footer{
     height: 80%;
 }
 
-.special{
-    display:flex;
-    align-items: center;
+/* DA MIGLIORARE */
+.footer-center .menu{
+    margin-left: -40px;
 }
-
-.special .menu i{
-    margin-left: 10px;
-}
+/* DA MIGLIORARE */
 
 .footer-right{
     width: 8%;
-    height: 80%;
+    height: 100%;
+    background-color: #4b4c4f;
+    color: #fb564c;
+    font-weight: 700;
 }
 
 /* /FOOTER */
@@ -174,7 +174,7 @@ footer{
 
 /* ------------------------------------------------ */
 /* +++ DEBUG +++ */
-.debug .container-lato{
+/* .debug .container-lato{
     background-color: lightblue;
 }
 
@@ -199,6 +199,6 @@ footer{
 }
 
 .debug .footer-right{
-    background-color: deeppink;
-}
+    background-color: #4b4c4f;
+} */
 /* /DEBUG */
